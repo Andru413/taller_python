@@ -29,9 +29,9 @@ class SistemaLogin:
         self.crear_login()
 
     def crear_login(self):
-        """Interfaz de inicio de sesión"""
+        """Interfaz de inicio de sesion"""
         self.limpiar_ventana()
-        tk.Label(self.master, text="Inicio de sesión", font=("Arial", 16), bg="#f0f0f0").pack(pady=10)
+        tk.Label(self.master, text="Inicio de sesion", font=("Arial", 16), bg="#f0f0f0").pack(pady=10)
 
         tk.Label(self.master, text="Usuario", font=("Arial", 12), bg="#f0f0f0").pack(pady=5)
         self.usuario_entry = tk.Entry(self.master, font=("Arial", 12))
@@ -42,12 +42,12 @@ class SistemaLogin:
         self.clave_entry.pack(pady=5)
 
         tk.Button(
-            self.master, text="Iniciar sesión", font=("Arial", 12), bg="#d1e7dd",
+            self.master, text="Iniciar sesion", font=("Arial", 12), bg="#d1e7dd",
             command=self.verificar_login
         ).pack(pady=10)
 
     def verificar_login(self):
-        """Verifica el inicio de sesión y redirige según el rol"""
+        """Verifica el inicio de sesion y redirige segun el rol"""
         usuario = self.usuario_entry.get()
         clave = self.clave_entry.get()
 
@@ -158,3 +158,4 @@ if __name__ == "__main__": #Profe lo hago asi para que inicie directo sin errore
     root = tk.Tk()
     app = SistemaLogin(root)
     root.mainloop()
+
